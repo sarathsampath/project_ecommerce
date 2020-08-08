@@ -4,7 +4,7 @@ var ecommerceUtils = require("../Utils/validateHelper");
 var ecommerceConstants = require("../Data/constants");
 var ecommerceResponse = require("../Utils/responseHelper");
 /**
-List the available sellers
+List the available sellers...
  */
 function listSeller() {
   try {
