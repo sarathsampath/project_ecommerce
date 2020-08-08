@@ -1,0 +1,243 @@
+List the sellers
+Route - https://localhost:8080/e-commerce/admin/password
+Get route
+Request param - password
+Response - {
+			"sellerId":"101ec",
+			"sellerDetails":{
+			"sellerName":"sarath",
+			"sellerAddress":{"city":"erode","state":"tamilnadu"},
+			"sellerContact":"9865483304",
+			"sellerProof":"adhaar.jpeg"},
+			"isActive":true
+		}
+Description -if the password is valid it will list the all the sellers
+------------------------------------------------------------------------------
+Add the sellers
+Route - https://localhost:8080/e-commerce/admin/(post)
+Post route 
+Request param -
+Response - "sellerId":"101ec",
+			"sellerDetails":{
+			"sellerName":"sarath",
+			"sellerAddress":{"city":"erode","state":"tamilnadu"},
+			"sellerContact":"9865483304",
+			"sellerProof":"adhaar.jpeg"},
+			"isActive":true
+Description -Add the new seller to the existing data
+-------------------------------------------------------------------------------
+Delete the sellers
+Route - https://localhost:8080/e-commerce/admin/id
+Delete route -
+Request param -id
+Response - "sellerId":"101ec",
+			"sellerDetails":{
+			"sellerName":"sarath",
+			"sellerAddress":{"city":"erode","state":"tamilnadu"},
+			"sellerContact":"9865483304",
+			"sellerProof":"adhaar.jpeg"},
+			"isActive":false
+Description -Delete the seller(soft delete)
+---------------------------------------------------------------------------------
+update the sellers
+Route - https://localhost:8080/e-commerce/admin/id/name
+Update route 
+Request param -id,name
+Response - "sellerId":"101ec",
+			"sellerDetails":{
+			"sellerName":"sarath",
+			"sellerAddress":{"city":"erode","state":"tamilnadu"},
+			"sellerContact":"9865483304",
+			"sellerProof":"adhaar.jpeg"},
+			"isActive":true
+Description -Update the seller
+--------------------------------------------------------------------------------
+Add the product
+Route - https://localhost:8080/e-commerce/seller/
+Post route 
+Request param -
+Response - {
+			"sellerId":"101ec",
+			"productId":"PDR123",
+			"productDetails":{
+			"productName":"redmiMobile",
+			"productPrice":"30000",
+			"productDiscount":"0",
+			"productImage":"redmiMobile.jpeg",
+			"productQuantity":"10",
+			"productDescription":"used as a bomb"},
+			"isActive":true
+		}
+Description -Add the new products to the existing data
+--------------------------------------------------------------------------------
+Delete the product
+Route - https://localhost:8080/e-commerce/seller/productId
+Delete route -
+Request param -productId
+Response - {
+			"sellerId":"101ec",
+			"productId":"PDR123",
+			"productDetails":{
+			"productName":"redmiMobile",
+			"productPrice":"30000",
+			"productDiscount":"0",
+			"productImage":"redmiMobile.jpeg",
+			"productQuantity":"10",
+			"productDescription":"used as a bomb"},
+			"isActive":true
+		}
+Description -Delete the product
+---------------------------------------------------------------------------
+update the product
+Route - https://localhost:8080/e-commerce/seller/productId/productDetails
+Update route 
+Request param -productIdid,productDetails
+Response - {
+			"sellerId":"101ec",
+			"productId":"PDR123",
+			"productDetails":{
+			"productName":"redmiMobile",
+			"productPrice":"30000",
+			"productDiscount":"0",
+			"productImage":"redmiMobile.jpeg",
+			"productQuantity":"10",
+			"productDescription":"used as a bomb"},
+			"isActive":true
+		}
+Description -Update the product
+----------------------------------------------------------------------------
+
+create a new account
+Route - https://localhost:8080/e-commerce/customer/
+Post route 
+Request param -
+Response - {
+	"customerId":"89er3",
+	"customerDetails":{
+	"customerName":"sanju",
+	"customerMail":"sanju@gmail.com",
+	"customerContact":"9445678344"},
+	"isActive":true
+}
+Description - create new account
+---------------------------------------------------------------------------
+
+update account
+Route - https://localhost:8080/e-commerce/customer/gmail/
+update route 
+Request param - gmail
+Response - {
+	"customerId":"89er3",
+	"customerDetails":{
+	"customerName":"sanju",
+	"customerMail":"sanju@gmail.com",
+	"customerContact":"9445678344"},
+	"isActive":true
+}
+Description -update existing account
+--------------------------------------------------------------------------
+add Product to cart
+Route - https://localhost:8080/e-commerce/cart/
+post route 
+Request param 
+Response - {"sellerId":"101ec",
+	    "customerId":"89er3",
+	    "productId":"PDR123",
+	    "productDetails":
+		{
+		"productId":"PDR123",
+		"productName":"redmiMobile",
+		"productPrice":"30000",
+		"productDiscount":"0",
+		"productImage":"redmiMobile.jpeg"
+		},
+	"isActive":true
+	}
+Description -Add Product to the cart
+--------------------------------------------------------------------------
+
+Remove Product from cart
+Route - https://localhost:8080/e-commerce/cart/productId/customerId
+delete route 
+Request param -productId/customerId
+Response - {"sellerId":"101ec",
+	    "customerId":"89er3",
+	    "productId":"PDR123",
+	    "productDetails":
+		{
+		"productId":"PDR123",
+		"productName":"redmiMobile",
+		"productPrice":"30000",
+		"productDiscount":"0",
+		"productImage":"redmiMobile.jpeg"
+		},
+	"isActive":false
+	}
+Description -Remove Product from cart
+
+-----------------------------------------------------------------------------
+
+Wishlist a Product
+Route - https://localhost:8080/e-commerce/wishList/
+post route 
+Request param -
+Response - {	"sellerId":"101ec",
+		"customerId":"89er3",
+		"productId":"PDR123",
+		"productDetails":{
+		"productName":"redmiMobile",
+		"productPrice":"30000",
+		"productDiscount":"0",
+		"productImage":"redmiMobile.jpeg",
+		"WishListedDate":"30-7-2020"},
+		"isActive":true			
+			}
+Description -Add item to the cart
+
+--------------------------------------------------------------------------------
+Remove from Wishlist
+Route - https://localhost:8080/e-commerce/wishList/productId/customerId
+delete route 
+Request param -productId/customerId
+Response - {	"sellerId":"101ec",
+		"customerId":"89er3",
+		"productId":"PDR123",
+		"productDetails":{
+		"productName":"redmiMobile",
+		"productPrice":"30000",
+		"productDiscount":"0",
+		"productImage":"redmiMobile.jpeg",
+		"WishListedDate":"30-7-2020"},
+		"isActive":false		
+			}
+Description -Remove item from cart
+---------------------------------------------------------------------------------
+
+Route - https://localhost:8080/e-commerce/orderProduct/
+post route 
+Request param -
+Response - {		
+		"orderid":"45tr7",
+		"sellerId":"101ec",
+		"productId":"PDR123",
+		"productDetails":
+		{
+			"productId":"PDR123",
+			"productName":"redmiMobile",
+			"productPrice":"30000",
+			"productDiscount":"0",
+			"productImage":"redmiMobile.jpeg"
+		},
+		"orderDate":"31-07-2020",
+		"productTotal":"40000",
+		"customerId":"89er3",
+		"customerDetails":{
+				"customerName":"sanju",
+				"customerMail":"sanju@gmail.com",
+				"customerContact":"9445678344"
+				},
+		"isActive":true
+		}
+Description -Invoice of the order
+---------------------------------------------------------------------------------
+
