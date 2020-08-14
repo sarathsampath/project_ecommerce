@@ -63,8 +63,9 @@ async function postSeller(sellerDetails) {
       "seller not found",
       ecommerceConstants.VALID
     );
+	logger.info("services:postSeller:end");
     return status;
-    logger.info("services:postSeller:end");
+    
   }
 }
 /**
@@ -115,8 +116,9 @@ async function updateSeller(sellerId, sellerName) {
       error,
       ecommerceConstants.VALID
     );
+	logger.info("services:updateSeller:end");
     return status;
-    logger.info("services:updateSeller:end");
+    
   }
 }
 /**
@@ -187,9 +189,9 @@ async function deleteSeller(sellerId) {
       false,
       "seller not found",
       ecommerceConstants.VALID
-    );
+    );logger.info("services:deleteSeller:end");
     return status;
-    logger.info("services:deleteSeller:end");
+    
   }
 }
 /**
@@ -223,9 +225,9 @@ async function postProduct(productDetails, sellerId) {
       false,
       "product not found",
       ecommerceConstants.VALID
-    );
+    ); logger.info("services:postProduct:end");
     return status;
-    logger.info("services:postProduct:end");
+   
   }
 }
 /**
@@ -278,9 +280,9 @@ async function updateProduct(productDetails, productId, sellerId) {
       false,
       "product not found",
       ecommerceConstants.VALID
-    );
+    );logger.info("services:updateProduct:end");
     return status;
-    logger.info("services:updateProduct:end");
+    
   }
 }
 /**
@@ -328,9 +330,9 @@ async function deleteProduct(productId) {
       false,
       "product not found",
       ecommerceConstants.VALID
-    );
+    );logger.info("services:deleteProduct:end");
     return status;
-    logger.info("services:deleteProduct:end");
+    
   }
 }
 /**
